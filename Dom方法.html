@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+    1.父子关系
+    parentNode父节点
+    childNodes所有子节点（包括元素节点，文本节点，注释节点）
+    children 获取某个元素下的元素子节点
+    2.兄弟关系
+    previousElementSibling上一个兄弟节点
+    nextElementSibling下一个兄弟节点
+    没有就为null
+    3.第一个娃
+    firstElementChild
+    最后一个娃
+    lastElementChild
+    4.标签：元素节点  数字1
+         属性节点   数字2
+         文本节点   数字3 文字 换行
+         注释节点   数字8
+         document   数字9
+         整个html中全是节点
+         属性：nodeType  值是一个数字，去查看节点类型的
+         nodeValue查看节点内容
+attributes 属性返回指定节点的属性集合，即 NamedNodeMap。
+提示：您可以使用 length 属性来确定属性的数量，然后您就能够遍历所有的属性节点并提取您需要的信息。
+ 比如：document.getElementsByTagName("BUTTON")[0].attributes;
+5.创建一个元素节点
+    document.createElement('li')
+往元素末尾添加元素
+parent.appendChild(child)
+往元素的首位添加元素：
+parent.insertBefore(插入的元素，参照元素)
+删除：
+parent。removeChild(那个元素)
+
+    6.克隆元素cloneNode(true)如果添加了true，不但能克隆元素本身，还克隆子级
+     注意:
+                在chrome的73.0.3683.103中多次克隆报错
+   
+
+
+    */
+    
+    </script>
+</body>
+</html>

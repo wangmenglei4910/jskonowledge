@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+1.闭包
+    函数套函数，子函数使用父函数的参数或者变量，并且子函数被外界所引用
+    此时父级形成闭包环境，父级的参数或者变量不被浏览器垃圾回收机制回收
+    此时，打印父函数的返回值，有个属性为scopes，scopes下有个closure的属性
+    closure就是闭包
+    使用闭包可以一直储存父级的参数或者变量不被外界的函数或变量所干扰（污染）
+2.箭头函数
+    一种函数的简写形式
+    箭头函数：1.this就是定义箭头函数的域（找老爹）2.箭头函数不能new，一new就报错3.箭头函数没有arguments
+箭头函数书写形式：
+    1.没有参数let fn=()=>{}
+    2.多个参数let fn=(a,b,c)=>{}
+    3.一个参数let fn=a=>{}
+    4.let fn=a=>a;return a
+this：
+   window
+        直接在全局输出this
+        函数打印this并且直接调用
+        定时器中普通函数this为window
+        匿名函数自执行
+   事件中的this
+        哪个对象触发，this就是那个对象
+   实例：
+        new构造函数-->this就是实例
+   箭头函数：
+        this就走定义函数的域（找老爹）
+        箭头函数不能new，一new就报错
+        箭头函数也没有arguments
+   对象中的this
+        let obj={function(){console.log(this)}}
+3.arguments
+     实参集合
+     function fn(){
+         console.log(arguments);
+     };
+     fn(1,2,3,4,5)--->arguments
+     箭头函数没有arguments
+   
+ 
+   
+
+    
+    */
+    
+    </script>
+</body>
+</html>

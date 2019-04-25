@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+1.undefined的几种情况：
+    1.对象没有某个属性的时候
+    2.函数没有返回值
+    3.形参没有实参
+    4.变量没有赋值
+    5.简单类型的自定义属性
+
+****只有在引用类型下才能添加属性和方法
+2.包装对象：
+     当简单类型去使用某个属性或者方法的时候，内部会偷偷地转成对象（new内置类）
+     把属性或者方法提供给使用者，然后再悄悄的销毁，这个过程就叫包装对象。
+3.自身属性
+     for in不但会枚举样本对象，还会枚举原型，此时就会多出来一些莫名奇妙的东西
+     但是我们不想要不是对象上的东西
+4.obj.hasOwnProperty('属性名')查看某个属性是不是对象自身的
+    返回值：布尔值，是就为true，不是就为false
+5.一个函数，天生就自带一些属性和方法
+     其中有：
+      apply()
+      call()
+      bind()
+      这些都能改变this指向
+    call：
+        有无数个参数：
+        第一个参数：
+            改变this指向（写啥是啥）
+            null和undefined都为wiindow
+        第二个参数之后：
+            就是实参
+    apply：
+        有两个参数
+        第一个参数：
+            改变this指向（写啥是啥）
+            null和undefined为window
+        第二个参数：
+            数组[1,2,3]
+            数组中放参数
+    bind：
+        有无数个参数
+        第一个参数：
+            改变this指向（写啥是啥）
+            null和undefined为window
+        第二个参数之后：
+            就是实参
+    使用bind不是立马执行函数，会返回一个新函数，这个函数的this是改变了的
+    得执行这个新函数才能输出代码
+6.json   长得像字符串得对象和数组'{}'   '[]'
+    json.parse()
+        能够把json转成对象或者数组
+        条件：1.json必须是一个标准格式，不然转不出来。标准格式'{"name":12,"nn":"ds"}'
+        json中不能放函数，不能为undefined
+    json.stringify()
+        把对象或者数组转成json
+        对象中不能放函数，不能为undefied
+7.继承
+    子类继承了父类的一些特征，然后自己还有一套 自己的特征
+  为什么要继承：
+    就是为了代码能够更好的复用，组合起来生成一个新的类别
+  属性继承：
+    类式继承（构造函数继承）
+         把父类看作一个函数，调用这个父类并且通过call去改变this指向，把指向改为子类
+    方法继承：
+        扩展式继承{...对象}
+        拷贝继承
+            for  in
+            child.prototype = deepClone(parent.prototype)
+        原型继承
+            对象继承-->寄生式组合继承--->{...对象}
+8.赋值/赋址
+       因为赋值的时候第一层为简单类型，简单类型的赋值就是赋值，如果第一层有引用
+       类型，那么引用类型的赋值为赋址。
+    
+       如果是引用类型，能把引用类型中的值取出来，如果值还是引用类型，那么继续循环
+       取值，直到全部都为简单类型为止。
+       let arr = [1,2,3,4,[5,{ary:[{name:'小强'}]}]];
+       deepclone-->深度克隆（深拷贝）
+9.constructor
+       实例下的constructor==实例的构造函数
+       但是这个constructor是随时随地随便可以修改的
+       constructor只能当作实例中指向构造函数的一种参考物
+       并不是能够左右实例的构造函数真相
+    constructor什么时候被修改?
+       给构造函数的原型赋址对象的时候会变
+    解决：
+        手动修正constructor指向
+        {
+            constructor:构造函数
+        }
+10.寄生式继承
+     object.create({})
+     必须传入一个对象
+     返回值为一个新的对象，这个对象的原型链指向传入的参数
+11.class（类）保留字
+     class是ES6才出来的新语法，优势就是写起来方便，他其实还是之前构造函数的语法糖
+       class 类名 {
+
+        }
+
+        使用constructor去接收参数
+            constructor(a,b){
+
+            }
+
+        写方法:
+            直接在类中
+                方法名 () {
+
+                }
+12.    ...
+        1.扩展运算符
+        
+        function fn(){
+            // console.log(arguments); //...[]
+            function f(a,b){
+                console.log(a,b);
+            }
+            f(...arguments);
+        }
+
+        fn(1,2);
+        2.剩余运算符
+        
+        ...c 是个数组
+        function fn(a,...c){
+            console.log(a,c);
+        }
+
+        fn(1,2,3,4,5);
+13.对象的属性只能有一个，如果写多个，下面的会把上面的覆盖
+
+
+        Object.assign(对象1,对象2,对象3....)
+
+
+        从后往前合并，改变第一个对象，第一个对象可以为{}
+
+        Child.prototype = Object.assign({},parent.prototype)
+    
+    
+    
+    */
+    
+    
+    
+    </script>
+</body>
+</html>
+

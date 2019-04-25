@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+数组方法：
+       push数组末尾添加数据，返回值是新数组length长度
+       pop删除末尾最后一项，返回值是删除的数据
+       unshift往数组首位添加一个或多个数据，返回值是新数组长度
+       shift删除数组首位数据，返回值是删除的数据
+       splice：能够增删改查数组，根据参数的不同，结果就不同
+       一个参数是从第几项删除到末尾，返回值是删除的数据
+       两个参数，第一个参数是从第几项起，第二个参数是操作几个数据
+       三个参数，第一个参数是从第几项起，第二个参数是操作几个数据，第三个参数替换的新数据
+       注意：如果第二个参数为0，返回值为空数组
+       第二个参数不为零，返回值是删除的数组组成的新数组
+循环遍历：
+       for in循环
+       forEach专门用于循环数组的
+       arr.forEach(function(item,i,all){})
+       arr.forEach(function(数组每一项),索引值,整个数组){})  
+       第二个参数，改变this指向，写啥是啥，如果写null，undefined指向window 
+       map循环数组，返回值是一个新数组 
+       function(item,i,all){
+                return 新数组的每项
+            }
+        join()以某个字符串为连接符，链接数组每一项，最后返回一个字符串
+        注意：如果不需要连接符，必须用空字符串表示''
+        filter过滤条件成立的值：
+         let arr = [18,28,38,48,26];
+    let arr2 = arr.filter(function(item,i){
+        if(item > 20 && item <= 28){
+            return item;  //return 条件成立的某项
+        }
+    });
+    reverse翻转数组   [1,2,3] -> [3,2,1] 
+    split('')
+    以字符为分隔符，把字符串分割为数组。
+    返回值是数组。
+    如果没有分割符，使用空字符串去切，
+     如果什么都不传，把整个字符串放到数组中
+     some 查看数组中某项数据是否满足某个条件
+     只要有一个符合条件，就返回true，反之即反，返回一个布尔值
+     every
+     判断数组中是不是每一项都符合某个条件
+     全部符合返回true，否则返回false
+数组排序sort
+     arr.sort(function(a,b){
+          return a-b;
+          //return b-a;
+     })
+
+
+
+*/
+let arr = [1,2,3,4];
+        console.log(arr.splice(0,2))
+    </script>
+</body>
+</html>
