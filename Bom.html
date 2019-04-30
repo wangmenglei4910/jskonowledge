@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+    1.new 一元运算符，专门运算函数的
+    2.元素下的style下的属性，默认为空字符串
+             计算后的样式：
+               getComputedstyle(element).属性
+               获取到的结果为  带单位  的字符串
+               比如：100px
+    3.ele.clientWidth/ele.clientHeight
+              支持padding，不包含边框
+         ele.offsetWidth/ele.offsetHeigth
+         支持padding，也包含边框，不带单位的数字
+         上面这2个，如果设置一个固定值，就以固定值为依据显示，不会以被内容撑开显示
+    4.ele.scrollHeight/ele.scrollWidth
+            被内容撑开的高度（不包含边框）
+          不管设不设置固定样式，就以被内容撑开的显示为准
+    5.offsetParent  定位父级
+          没有定位父级走body
+      offsetLeft
+          当前元素（左外边框）到定位父级的（左内边框）距离
+      offsetTop
+          当前元素（上外边框）到定位父级的（上内边框）距离
+    获取的是不带单位的数字
+     
+        如果要使用上面的属性，一定要做到以下几点
+        1.子级有绝对定位
+        2.定位父级也一定要有定位
+        3.子级和父级都要有宽高（触发haslayout,zoom:1）
+    6.绝对定位
+        当前元素到页面顶端的位置
+        clientLeft/clientTop  边框尺寸
+        getComputedStyle(box3).borderTopWidth 边框尺寸
+        getBoungingClientRect()当前元素到页面可视区的尺寸，距离
+        注意：
+           **是跟滚动条走的
+    7.Bom：
+         Borwser Object Model  浏览器对象模型
+         获取浏览器的尺寸
+         window.innerWidth/window.innerHeight
+        注意：
+           window.innerWidth||/window.innerHeigth如果有滚动条，是忽略了滚动条尺寸的
+           document.body.clientWidth(浏览器的尺寸，排除滚动条的)
+           使用的时侯把默认样式清除
+        window.open(url,用什么方式打开_blank,_self)
+        打开新的窗口
+        注意：
+            需要用户主动触发才不会被拦截
+        比如：
+            window.open('http://www.baidu.com')
+            window.close();
+                  关闭浏览器窗口
+                  最好也是用户主动触发体验才好
+    8.滚动条的距离，只能读不能写
+        window.pageYOffset/window.pageXOffset
+    9.window.scrollTo(x,y)专门用来写滚动条距离的
+        滚动条距离，既能读也能写（document.documentElement=HTML）
+        document.documentElement.scrollTop
+    10.onresize 缩放浏览器的时候触发的事件
+    11.onscroll 有滚动条的时候滚轮时触发
+    12.window.navigator.userAgent，查看用户的浏览器内核信息
+
+        注意:
+            使用的时候判断的字符串有可能会被模拟。
+    13.hash:""浏览器hash信息，#之后的信息，更换这个信息是不会刷新页面的
+        window.location.hash  既能读也能写
+
+        host:"" ip地址+端口号
+        hostname:""  ip地址
+        href:""   url
+        origin:"file://"
+        port:""  端口
+        protocal:"file:"  协议
+        reload:f reload()   刷新页面
+        replace: f()   替换页面
+        search:""    查询信息
+    14.window.location.href
+       window.location.search
+       ?到#号之间的信息
+       即可读也可写，只不过写的时候会刷新页面
+
+
+
+                */
+    </script>
+</body>
+</html>
