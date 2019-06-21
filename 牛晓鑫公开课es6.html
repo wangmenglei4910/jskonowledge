@@ -1,0 +1,102 @@
+<!-- 
+    es6：让js能够开发大型的应用程序
+    1.let使命的变量不进行变量提升
+    2.let声明的变量不能重复声明
+    3.在形成全局作用域之后，代码运行之前，需要把带let进行过滤，如果let声明的变量重复，那么直接报错，代码不再运行；
+    4.let声明的变量只在当前块级作用域下生效
+    5.for循环中，let会让当前for循环形成一个块级作用域，每循环一次，形成一个小的子作用域，子作用域存储了每次循环的i值。
+    6.es6中，块级作用域中，声明的函数，外界不能调用。
+
+    const
+    1.定义常量，常量不可修改。
+
+    块级作用域：
+    全局作用域和私有作用域
+    作用域：1.提供代码的运行环境
+           2.存储基本数据类型值
+
+           es6新增块级作用域：
+           for循环   if else switch try catch{}
+
+
+    解构赋值
+    let {}={}
+
+    Array:类数组
+    Array.from:将类数组转换成一个真的数组
+    Array.of将一组数转成数组
+
+    剩余运算符：
+    ...ary
+    两个数组拼接：concat    [...ary1,...ary2]这两个都属于浅拷贝
+
+    什么是浅拷贝，什么是深拷贝
+
+    对象的扩展：
+    object.assign() 合并对象，第一个参数是目标源，合并时使用了第一个参数的空间地址，导致目标对象跟着发生改变。
+      可枚举属性，通过for in能循环出来的（私有属性或者原型上新增的自定义的属性都是可枚举的属性）
+
+
+    1.在块级作用域中，先对function进行声明定义
+    例子：
+    if(true){
+           var fn=10;
+           function fn(){}
+    }
+    console.log(fn)   //报错
+    
+深拷贝，浅拷贝：obj={ab:"hello",bc:{name:"zhufeng"}}
+    for in 循环是浅克隆，只克隆了一层
+    浅拷贝：通过for in循环可以得到一个新的newobj；他们中的bc的属性名对应的属性值，指向了同一个空间地址，导致两个对象不是完全独立的，这就是浅拷贝。（for in   object.assign  扩展运算符{...obj}）
+    深拷贝：JSON.parse   JSON.stringify
+
+箭头函数：
+    箭头函数写法上的不同：
+    1.箭头函数去掉了function，在()和{}之间新增了=>
+    2.如果箭头函数只有一个形参，可以省略参数的小括号。
+    3.如果只有一条return语句时，可以省略{}和return
+    4.return一个对象的话，加一个小括号    let a=b=>{return {name:303}}    ->let a= b =>({name:303})return一个对象的话，如果省略return，需要在return的对象外面加();
+    5.箭头函数中没有this，箭头函数的this，指向当前函数定义时所在的作用域的this指向（在上级作用域定义，指向上级作用域）
+    6.没有arguments
+    7.箭头函数不能作为构造函数（不能new，一new就报错）   
+    8.箭头函数中不能使用yield命令。
+
+new操作符做了什么？
+    1.先创建了一个新的空对象
+    2.然后让这个空对象的__proto__指向函数的原型prototype
+    3.将对象作为函数的this传进去，如果return 出来东西是对象的话就直接返回 return 的内容，没有的话就返回创建的这个对象
+
+
+promise:
+    是js异步解决的一种方案。
+    promise解决了回调地狱的问题
+    promise三种状态：pending  fulfilled rejected
+    promise一旦状态发生改变，那么状态就会被凝固，不能改写。
+    .then是订阅成功或失败的回调，then是promise原型上的方法。promise的then是异步的，微观任务
+    promise本身是同步的，解决的是异步的问题。
+    catch  捕获异常
+    all
+
+async：
+    async await:必须成对出现。
+    async函数返回一个promise对象，函数体中await语句后面的代码是异步的。
+    await函数后面的代码是一个微任务，如果宏任务和微任务同时存在的话，那么会先运行微任务。
+    微任务：promise的then，await，process.nextTick...
+    宏任务：setTimeout setInterval
+
+
+class:
+    
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
